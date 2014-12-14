@@ -29,6 +29,7 @@ PRODUCT_COPY_FILES += \
     device/sony/tianchi/rootdir/system/etc/sec_config:system/etc/sec_config \
     device/sony/tianchi/rootdir/system/etc/mixer_paths.xml:system/etc/mixer_paths.xml \
     device/sony/tianchi/rootdir/system/etc/thermanager.xml:system/etc/thermanager.xml \
+    device/sony/tianchi/rootdir/fstab.yukon:root/fstab.yukon \
     device/sony/tianchi/rootdir/init.yukon.dev.rc:root/init.yukon.dev.rc \
     device/sony/tianchi/rootdir/logo.rle:root/logo.rle
 
@@ -40,5 +41,5 @@ PRODUCT_LOCALES += xhdpi hdpi
 PRODUCT_MANUFACTURER := Sony
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=320
+    ro.sf.lcd_density=240
 
