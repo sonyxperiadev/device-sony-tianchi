@@ -11,12 +11,6 @@ service sensors /system/bin/sensors.qcom
     user root
     group root
 
-#OSS thermal management
-service thermanager /system/bin/thermanager /system/etc/thermanager.xml
-    class main
-    user root
-    group root
-
 #OSS WLAN setup
 service wcnss_addr /system/bin/wcnss_addr /sys/devices/fb000000.qcom,wcnss-wlan/wcnss_mac_addr
     class main
