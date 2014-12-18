@@ -25,6 +25,9 @@ $(call inherit-product, device/sony/yukon/device.mk)
 $(call inherit-product, vendor/sony/tianchi/tianchi-vendor.mk)
 $(call inherit-product-if-exists, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
+DEVICE_PACKAGE_OVERLAYS += \
+    device/sony/tianchi/overlay
+
 PRODUCT_COPY_FILES += \
     device/sony/tianchi/rootdir/system/usr/idc/cyttsp4_mt.idc:system/usr/idc/cyttsp4_mt.idc \
     device/sony/tianchi/rootdir/system/etc/sensor_def_qcomdev.conf:system/etc/sensor_def_qcomdev.conf \
