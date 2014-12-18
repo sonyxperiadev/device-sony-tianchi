@@ -45,5 +45,5 @@ PRODUCT_LOCALES += xhdpi hdpi
 PRODUCT_MANUFACTURER := Sony
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=320
+    ro.sf.lcd_density=240
 
