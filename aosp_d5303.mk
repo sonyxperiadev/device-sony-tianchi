@@ -15,6 +15,10 @@
 TARGET_PREBUILT_KERNEL := kernel
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/$(TARGET_PREBUILT_KERNEL):kernel
 
+# backlight brightness below 127 is useless
+# use 127-255 as brightness range.
+BOARD_HAS_DIM_BACKLIGHT := true
+
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony.mk)
 $(call inherit-product, device/sony/yukon/device.mk)
@@ -41,5 +45,5 @@ PRODUCT_LOCALES += xhdpi hdpi
 PRODUCT_MANUFACTURER := Sony
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=320
+    ro.sf.lcd_density=240
 
