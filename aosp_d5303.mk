@@ -39,6 +39,9 @@ PRODUCT_COPY_FILES += \
     device/sony/tianchi/rootdir/fstab.yukon:root/fstab.yukon \
     device/sony/tianchi/rootdir/logo.rle:root/logo.rle
 
+PRODUCT_PACKAGES += \
+    keystore.msm8226
+
 PRODUCT_NAME := aosp_d5303
 PRODUCT_DEVICE := tianchi
 PRODUCT_BRAND := Sony
