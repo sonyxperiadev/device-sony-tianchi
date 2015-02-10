@@ -12,8 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-TARGET_PREBUILT_KERNEL := kernel
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/$(TARGET_PREBUILT_KERNEL):kernel
+TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/kernel
 
 # backlight brightness below 127 is useless
 # use 127-255 as brightness range.
