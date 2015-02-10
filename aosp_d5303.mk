@@ -12,6 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+TARGET_KERNEL_CONFIG := aosp_yukon_tianchi_defconfig
 TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/kernel
 
 # backlight brightness below 127 is useless
