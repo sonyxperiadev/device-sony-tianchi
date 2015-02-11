@@ -35,8 +35,7 @@ PRODUCT_COPY_FILES += \
     device/sony/tianchi/rootdir/system/etc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
     device/sony/tianchi/rootdir/system/etc/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
     device/sony/tianchi/rootdir/init.yukon.dev.rc:root/init.yukon.dev.rc \
-    device/sony/tianchi/rootdir/fstab.yukon:root/fstab.yukon \
-    device/sony/tianchi/rootdir/logo.rle:root/logo.rle
+    device/sony/tianchi/rootdir/fstab.yukon:root/fstab.yukon
 
 PRODUCT_PACKAGES += \
     keystore.msm8226
