@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+**
+** Copyright 2009, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License")
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+
+<device name="Android">
+  <!-- Most values are the incremental current used by a feature,
+       in mA (measured at nominal voltage).
+       The default values are deliberately incorrect dummy values.
+       OEM's must measure and provide actual values before
+       shipping a device.
+       Example real-world values are given in comments, but they
+       are totally dependent on the platform and can vary
+       significantly, so should be measured on the shipping platform
+       with a power meter. -->
+  <item name="none">0</item>
+  <item name="screen.on">41.5</item>
+  <item name="screen.full">188.6</item>
+  <item name="bluetooth.active">0.1</item>
+  <item name="bluetooth.on">1.2</item>
+  <item name="bluetooth.at">29.27</item>
+  <item name="wifi.on">2.22</item>
+  <item name="wifi.active">25.88</item>
+  <item name="wifi.scan">0.1</item>
+  <item name="dsp.audio">0.1</item>
+  <item name="dsp.video">0.1</item>
+  <item name="radio.active">187.99</item>
+  <item name="radio.scanning">5.8</item>
+  <item name="gps.on">39.73</item>
+  <!-- Current consumed by the radio at different signal strengths, when paging -->
+  <array name="radio.on">
+      <value>3.37</value>
+      <value>3.42</value>
+      <value>3.82</value>
+      <value>3.91</value>
+      <value>3.96</value>
+  </array>
+  <!-- Different CPU speeds as reported in
+       /sys/devices/system/cpu/cpu0/cpufreq/stats/time_in_state -->
+  <array name="cpu.speeds">
+      <value>300000</value>
+      <value>384000</value>
+      <value>600000</value>
+      <value>787200</value>
+      <value>998400</value>
+      <value>1094400</value>
+      <value>1190400</value>
+      <value>1305600</value>
+      <value>1344000</value>
+      <value>1401600</value>
+  </array>
+  <!-- Current when CPU is idle -->
+  <item name="cpu.idle">1.94</item>
+  <item name="cpu.awake">66.2</item>
+  <item name="cpu.wakeup">121.72</item>
+  <!-- Current at each CPU speed, as per 'cpu.speeds' -->
+  <array name="cpu.active">
+      <value>66.2</value>
+      <value>72.7</value>
+      <value>88.9</value>
+      <value>99.5</value>
+      <value>133.9</value>
+      <value>139.9</value>
+      <value>147.6</value>
+      <value>153.3</value>
+      <value>155.9</value>
+      <value>159.3</value>
+  </array>
+  <!-- This is the battery capacity in mAh (measured at nominal voltage) -->
+  <item name="battery.capacity">3000</item>
+
+  <array name="wifi.batchedscan"> <!-- mA -->
+      <value>.0002</value> <!-- 1-8/hr -->
+      <value>.002</value>  <!-- 9-64/hr -->
+      <value>.02</value>   <!-- 65-512/hr -->
+      <value>.2</value>    <!-- 513-4,096/hr -->
+      <value>2</value>    <!-- 4097-/hr -->
+  </array>
+</device>
