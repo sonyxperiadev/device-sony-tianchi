@@ -16,6 +16,8 @@ include device/sony/yukon/BoardConfig.mk
 
 TARGET_RECOVERY_FSTAB = device/sony/tianchi/rootdir/fstab.yukon
 
+TARGET_SYSTEM_PROP += device/sony/tianchi/system.prop
+
 TARGET_BOOTLOADER_BOARD_NAME := D5303
 
 BOARD_SYSTEMIMAGE_PARTITION_SIZE   := 2399141888
