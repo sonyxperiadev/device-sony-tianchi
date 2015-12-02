@@ -1,0 +1,24 @@
+# aDSP sensors
+persist.debug.sensors.hal=w
+ro.qti.sensors.qmd=false
+ro.qti.sensors.amd=false
+ro.qti.sensors.rmd=false
+ro.qti.sensors.vmd=false
+ro.qti.sdk.sensors.gestures=false
+ro.qti.sensors.pedometer=false
+ro.qti.sensors.pam=false
+ro.qti.sensors.scrn_ortn=false
+ro.qti.sensors.step_detector=true
+ro.qti.sensors.step_counter=true
+ro.qti.sensors.georv=true
+ro.qti.sensors.game_rv=true
+ro.qti.sensors.smd=true
+ro.qti.sensors.tilt=true
+ro.qti.sensors.tilt_detector=true
+ro.qti.sensors.cmc=false
+ro.qti.sensors.bte=false
+ro.qti.sensors.fns=false
+ro.qti.sensors.gtap=false
+ro.qti.sensors.tap=false
+ro.qti.sensors.facing=false
+
