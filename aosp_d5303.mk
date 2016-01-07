@@ -31,6 +31,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_COPY_FILES += \
     device/sony/tianchi/rootdir/system/usr/idc/cyttsp4_mt.idc:system/usr/idc/cyttsp4_mt.idc \
+    device/sony/tianchi/rootdir/system/etc/sap.conf:system/etc/sap.conf \
     device/sony/tianchi/rootdir/system/etc/sensor_def_qcomdev.conf:system/etc/sensor_def_qcomdev.conf \
     device/sony/tianchi/rootdir/system/etc/sensor_def_somc.conf:system/etc/sensor_def_somc.conf \
     device/sony/tianchi/rootdir/system/etc/sensors_calib.conf:system/etc/sensors_calib.conf \
