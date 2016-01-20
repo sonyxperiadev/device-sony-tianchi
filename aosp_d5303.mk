@@ -42,6 +42,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     keystore.msm8226
 
+# NFC config
+PRODUCT_PACKAGES += nfc_nci.tianchi
+ADDITIONAL_DEFAULT_PROPERTIES += ro.hardware.nfc_nci=tianchi
+
 PRODUCT_NAME := aosp_d5303
 PRODUCT_DEVICE := tianchi
 PRODUCT_MODEL := Xperia T2 Ultra (AOSP)
