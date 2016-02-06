@@ -14,10 +14,6 @@
 
 TARGET_KERNEL_CONFIG := aosp_yukon_tianchi_defconfig
 
-# backlight brightness below 127 is useless
-# use 127-255 as brightness range.
-BOARD_HAS_DIM_BACKLIGHT := true
-
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 $(call inherit-product, device/sony/yukon/platform.mk)
 $(call inherit-product, vendor/sony/tianchi/tianchi-vendor.mk)
@@ -26,18 +22,35 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 DEVICE_PACKAGE_OVERLAYS += \
     device/sony/tianchi/overlay
 
+# Device etc
 PRODUCT_COPY_FILES += \
-    device/sony/tianchi/rootdir/system/usr/idc/cyttsp4_mt.idc:system/usr/idc/cyttsp4_mt.idc \
     device/sony/tianchi/rootdir/system/etc/sensor_def_qcomdev.conf:system/etc/sensor_def_qcomdev.conf \
     device/sony/tianchi/rootdir/system/etc/mixer_paths.xml:system/etc/mixer_paths.xml \
     device/sony/tianchi/rootdir/system/etc/thermanager.xml:system/etc/thermanager.xml \
     device/sony/tianchi/rootdir/system/etc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
-    device/sony/tianchi/rootdir/system/etc/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
-    device/sony/tianchi/rootdir/init.yukon.dev.rc:root/init.yukon.dev.rc \
-    device/sony/tianchi/rootdir/fstab.yukon:root/fstab.yukon
+    device/sony/tianchi/rootdir/system/etc/libnfc-nxp.conf:system/etc/libnfc-nxp.conf
+
+# IDC
+PRODUCT_COPY_FILES += \
+    device/sony/tianchi/rootdir/system/usr/idc/cyttsp4_mt.idc:system/usr/idc/cyttsp4_mt.idc
 
 PRODUCT_PACKAGES += \
     keystore.msm8226
+
+# Device Init
+PRODUCT_PACKAGES += \
+    fstab.yukon \
+    init.recovery.tianchi \
+    init.tianchi \
+    ueventd.tianchi
+
+# Lights
+PRODUCT_PACKAGES += \
+    lights.tianchi
+
+# Simple PowerHAL
+PRODUCT_PACKAGES += \
+    power.tianchi
 
 PRODUCT_NAME := aosp_d5303
 PRODUCT_DEVICE := tianchi
