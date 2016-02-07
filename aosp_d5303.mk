@@ -14,7 +14,7 @@
 
 TARGET_KERNEL_CONFIG := aosp_yukon_tianchi_defconfig
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 $(call inherit-product, device/sony/yukon/device.mk)
 $(call inherit-product, vendor/sony/tianchi/tianchi-vendor.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
