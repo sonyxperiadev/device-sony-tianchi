@@ -18,14 +18,10 @@ TARGET_KERNEL_CONFIG := aosp_yukon_tianchi_defconfig
 # use 127-255 as brightness range.
 BOARD_HAS_DIM_BACKLIGHT := true
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/telephony.mk)
-$(call inherit-product, device/sony/common/common.mk)
-$(call inherit-product, device/sony/yukon/device.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+$(call inherit-product, device/sony/yukon/platform.mk)
 $(call inherit-product, vendor/sony/tianchi/tianchi-vendor.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
-$(call inherit-product-if-exists, prebuilts/chromium/webview_prebuilt.mk)
-$(call inherit-product-if-exists, vendor/google/products/gms.mk)
 
 DEVICE_PACKAGE_OVERLAYS += \
     device/sony/tianchi/overlay
