@@ -52,6 +52,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     power.tianchi
 
+# NFC config
+PRODUCT_PACKAGES += \
+    nfc_nci.pn54x.default
+
 PRODUCT_NAME := aosp_d5303
 PRODUCT_DEVICE := tianchi
 PRODUCT_MODEL := Xperia T2 Ultra (AOSP)
