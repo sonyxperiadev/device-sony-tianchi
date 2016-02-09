@@ -14,7 +14,7 @@
 
 include device/sony/yukon/PlatformConfig.mk
 
-TARGET_RECOVERY_FSTAB = device/sony/tianchi/rootdir/fstab.yukon
+TARGET_RECOVERY_FSTAB = device/sony/tianchi/rootdir/fstab.tianchi
 
 TARGET_BOOTLOADER_BOARD_NAME := D5303
 
