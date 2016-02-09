@@ -39,7 +39,7 @@ PRODUCT_PACKAGES += \
 
 # Device Init
 PRODUCT_PACKAGES += \
-    fstab.yukon \
+    fstab.tianchi \
     init.recovery.tianchi \
     init.tianchi \
     ueventd.tianchi
