@@ -20,7 +20,7 @@ on init
     symlink /dev/block/platform/msm_sdcc.1 /dev/block/bootdevice
 
 on fs
-    mount_all ./fstab.yukon
+    mount_all ./fstab.tianchi
     write /sys/kernel/boot_adsp/boot 1
 
 on post-fs-data
