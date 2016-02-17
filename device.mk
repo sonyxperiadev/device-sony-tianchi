@@ -27,6 +27,12 @@ PRODUCT_COPY_FILES := \
 PRODUCT_COPY_FILES += \
     device/sony/tianchi/rootdir/system/usr/idc/cyttsp4_mt.idc:system/usr/idc/cyttsp4_mt.idc
 
+# Device Specific Permissions
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
+    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
+    frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:system/etc/permissions/android.hardware.sensor.gyroscope.xml
+
 PRODUCT_PACKAGES += \
     keystore.msm8226
 
