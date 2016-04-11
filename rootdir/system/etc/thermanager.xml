@@ -44,7 +44,7 @@
 		</resource>
 
 		<!-- device-specific -->
-		<resource name="backlight" type="sysfs">/sys/class/leds/wled:backlight/max_brightness</resource>
+		<resource name="backlight" type="sysfs">/sys/class/leds/lcd-backlight/max_brightness</resource>
 
 		<resource name="kgsl-3d0" type="sysfs">/sys/class/kgsl/kgsl-3d0/max_gpuclk</resource>
 		<resource name="usb" type="sysfs">/sys/class/power_supply/usb/current_max</resource>
