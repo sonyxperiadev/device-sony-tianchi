@@ -17,7 +17,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 # Device etc
 PRODUCT_COPY_FILES := \
-    device/sony/tianchi/rootdir/system/etc/sensor_def_qcomdev.conf:system/etc/sensor_def_qcomdev.conf \
+    device/sony/tianchi/rootdir/system/etc/sensors/sensor_def_qcomdev.conf:system/etc/sensors/sensor_def_qcomdev.conf \
     device/sony/tianchi/rootdir/system/etc/mixer_paths.xml:system/etc/mixer_paths.xml \
     device/sony/tianchi/rootdir/system/etc/thermanager.xml:system/etc/thermanager.xml \
     device/sony/tianchi/rootdir/system/etc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
