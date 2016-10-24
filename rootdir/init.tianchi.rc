@@ -29,6 +29,9 @@ on post-fs-data
     symlink /dev/pn54x /dev/pn547
 
 on boot
+    # Bluetooth
+    chown system system /sys/devices/fb000000.qcom,wcnss-wlan/wcnss_mac_addr
+
     # Enable writing to led blink node from userspace
     chown system system /sys/class/leds/red/blink
     chown system system /sys/class/leds/green/blink
@@ -41,9 +44,12 @@ on boot
 
 # OSS WLAN setup
 service macaddrsetup /system/bin/macaddrsetup /sys/devices/fb000000.qcom,wcnss-wlan/wcnss_mac_addr
-    class main
-    user root
+    class core
+    user system
+    group system bluetooth
+    disabled
     oneshot
+    writepid /dev/cpuset/system-background/tasks
 
 # WCNSS service
 service wcnss_service /system/vendor/bin/wcnss_service
@@ -88,6 +94,10 @@ service hciattach /system/bin/sh /system/etc/init.qcom.bt.sh
     group bluetooth system
     disabled
     oneshot
+
+on property:vold.post_fs_data_done=1
+    # Generate Bluetooth MAC address file only when /data is ready
+    start macaddrsetup
 
 on property:bluetooth.hciattach=true
     start hciattach
